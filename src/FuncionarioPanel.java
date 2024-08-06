@@ -15,6 +15,44 @@ public class FuncionarioPanel extends JPanel {
 
         JLabel nomeLabel = new JLabel("Nome:");
         nomeField = new JTextField();
+        JLabel funcaoLabel = new JLabel("Função:");
+        funcaoField = new JTextField();
+        JLabel horarioLabel = new JLabel("Hora:");
+        horarioField = new JTextField();
+        JLabel salarioLabel = new JLabel("Salario:");
+        salarioField = new JTextField();
 
-    }
-}
+        JButton cadastrarButton = new JButton("Cadastrar Funcionario");
+        cadastrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nome = nomeField.getText();
+                String funcao = funcaoField.getText();
+                String horario = horarioField.getText();
+
+                JOptionPane.showMessageDialog(null, "Funcionario cadastrado com sucesso!");
+                clearFields();
+
+            }
+        });
+
+                add(nomeLabel);
+                add(nomeField);
+                add(funcaoLabel);
+                add(funcaoField);
+                add(salarioLabel);
+                add(salarioField);
+                add(horarioLabel);
+                add(horarioField);
+                add(cadastrarButton);
+            }
+
+            private void clearFields(){
+                nomeField.setText("");
+                funcaoField.setText("");
+                salarioField.setText("");
+                horarioField.setText("");
+
+
+            }
+        }

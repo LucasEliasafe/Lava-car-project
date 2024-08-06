@@ -50,7 +50,10 @@ public class ClientePanel extends JPanel {
     }
 
     public void clearFields() {
-
+    nomeField.setText("");
+    telefoneField.setText("");
+    placaCarroField.setText("");
+    modeloCarroField.setText("");
 
     }
 }
