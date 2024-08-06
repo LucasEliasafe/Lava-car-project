@@ -10,18 +10,20 @@ public class ClientePanel extends JPanel {
     private JTextField modeloCarroField;
 
     public ClientePanel() {
-        setLayout(new GridLayout(5, 2));
+        setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 
         JLabel nomeLabel = new JLabel("Nome:");
-        nomeField = new JTextField();
+        nomeField = new JTextField(10);
         JLabel telefoneLabel = new JLabel("Telefone:");
-        telefoneField = new JTextField();
+        telefoneField = new JTextField(10);
         JLabel placaCarroLabel = new JLabel("Placa carro:");
-        placaCarroField = new JTextField();
+        placaCarroField = new JTextField(7);
         JLabel modeloCarroLabel = new JLabel("Modelo carro:");
-        modeloCarroField = new JTextField();
+        modeloCarroField = new JTextField(10);
 
         JButton cadastrarButton = new JButton("Cadastrar Cliente");
+        cadastrarButton.setPreferredSize(new Dimension(140, 25));
+
         cadastrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,6 +47,7 @@ public class ClientePanel extends JPanel {
         add(placaCarroField);
         add(modeloCarroLabel);
         add(modeloCarroField);
+        add(new JLabel());
         add(cadastrarButton);
 
     }

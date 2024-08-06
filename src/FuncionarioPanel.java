@@ -11,7 +11,7 @@ public class FuncionarioPanel extends JPanel {
 
 
     public FuncionarioPanel() {
-        setLayout(new GridLayout(4, 2));
+        setLayout(new GridLayout(5, 2,10, 10));
 
         JLabel nomeLabel = new JLabel("Nome:");
         nomeField = new JTextField();
@@ -29,13 +29,13 @@ public class FuncionarioPanel extends JPanel {
                 String nome = nomeField.getText();
                 String funcao = funcaoField.getText();
                 String horario = horarioField.getText();
+                String salario = salarioField.getText();
 
                 JOptionPane.showMessageDialog(null, "Funcionario cadastrado com sucesso!");
                 clearFields();
 
             }
         });
-
                 add(nomeLabel);
                 add(nomeField);
                 add(funcaoLabel);
